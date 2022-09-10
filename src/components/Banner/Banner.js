@@ -1,11 +1,13 @@
 import React from 'react'
 import { Container, Typography, makeStyles } from "@material-ui/core";
 import Carousel from './Carousel';
+import BannerImage from "./bannerImage.jpg"
+
 
 
 const useStyles = makeStyles(() => ({
     banner: {
-        backgroundImage: "url(../bannerImage.jpg)",
+        backgroundImage: `url(${BannerImage})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
     },
