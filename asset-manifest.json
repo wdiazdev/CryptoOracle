@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.6a910155.css",
-    "main.js": "/react-gh-pages/static/js/main.e96c676e.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.6a910155.css.map": "/react-gh-pages/static/css/main.6a910155.css.map",
-    "main.e96c676e.js.map": "/react-gh-pages/static/js/main.e96c676e.js.map"
+    "main.css": "/wdiazdev/CryptoOracle/static/css/main.6a910155.css",
+    "main.js": "/wdiazdev/CryptoOracle/static/js/main.e96c676e.js",
+    "index.html": "/wdiazdev/CryptoOracle/index.html",
+    "main.6a910155.css.map": "/wdiazdev/CryptoOracle/static/css/main.6a910155.css.map",
+    "main.e96c676e.js.map": "/wdiazdev/CryptoOracle/static/js/main.e96c676e.js.map"
   },
   "entrypoints": [
     "static/css/main.6a910155.css",
