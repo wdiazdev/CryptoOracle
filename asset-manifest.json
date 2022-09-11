@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/CryptoOracle/static/css/main.6a910155.css",
-    "main.js": "/CryptoOracle/static/js/main.c552a741.js",
-    "index.html": "/CryptoOracle/index.html",
-    "main.6a910155.css.map": "/CryptoOracle/static/css/main.6a910155.css.map",
-    "main.c552a741.js.map": "/CryptoOracle/static/js/main.c552a741.js.map"
+    "main.css": "/static/css/main.6a910155.css",
+    "main.js": "/static/js/main.d092d44a.js",
+    "static/media/bannerImage.jpg": "/static/media/bannerImage.1c3218371e8326673781.jpg",
+    "index.html": "/index.html",
+    "main.6a910155.css.map": "/static/css/main.6a910155.css.map",
+    "main.d092d44a.js.map": "/static/js/main.d092d44a.js.map"
   },
   "entrypoints": [
     "static/css/main.6a910155.css",
-    "static/js/main.c552a741.js"
+    "static/js/main.d092d44a.js"
   ]
 }
