@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a910155.css",
-    "main.js": "/static/js/main.d092d44a.js",
-    "static/media/bannerImage.jpg": "/static/media/bannerImage.1c3218371e8326673781.jpg",
-    "index.html": "/index.html",
-    "main.6a910155.css.map": "/static/css/main.6a910155.css.map",
-    "main.d092d44a.js.map": "/static/js/main.d092d44a.js.map"
+    "main.css": "/wdiazdev/CryptoOracle/static/css/main.6a910155.css",
+    "main.js": "/wdiazdev/CryptoOracle/static/js/main.7cb62c8f.js",
+    "static/media/bannerimage.jpg": "/wdiazdev/CryptoOracle/static/media/bannerimage.e595635ee394d7b590a9.jpg",
+    "index.html": "/wdiazdev/CryptoOracle/index.html",
+    "main.6a910155.css.map": "/wdiazdev/CryptoOracle/static/css/main.6a910155.css.map",
+    "main.7cb62c8f.js.map": "/wdiazdev/CryptoOracle/static/js/main.7cb62c8f.js.map"
   },
   "entrypoints": [
     "static/css/main.6a910155.css",
-    "static/js/main.d092d44a.js"
+    "static/js/main.7cb62c8f.js"
   ]
 }
