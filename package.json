@@ -2,7 +2,7 @@
   "name": "mycryptoapp",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/wdiazdev/",
+  "homepage": "https://wdiazdev.github.io/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
