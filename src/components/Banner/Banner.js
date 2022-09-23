@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Typography, makeStyles } from "@material-ui/core";
 import Carousel from './Carousel';
-import BannerImage from "./bannerImage.jpg"
+import BannerImage from "./bannerimage.jpg"
 
 
 
