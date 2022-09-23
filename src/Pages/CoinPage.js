@@ -9,6 +9,7 @@ import ReactHTMLParser from "react-html-parser";
 import { numberWithCommas } from "../components/Banner/Carousel";
 
 
+
 const CoinPage = () => {
     const { id } = useParams();
     const [crypto, setCrypto] = useState();
@@ -24,7 +25,7 @@ const CoinPage = () => {
         // eslint-disable-next-line
     }, []);
 
-
+    console.log(crypto);
     const useStyles = makeStyles((theme) => ({
         container: {
             display: "flex",
@@ -42,11 +43,13 @@ const CoinPage = () => {
             borderRight: "2px solid #04D4F0",
             [theme.breakpoints.down("md")]: {
                 width: "100%",
+                borderRight: "none",
             }
         },
         heading: {
             fontFamily: "Montserrat",
             fontWeight: "600",
+            fontSize: 20,
             marginBottom: 20,
         },
         description: {
@@ -107,44 +110,101 @@ const CoinPage = () => {
 
                     {/* RANK  */}
                     <span style={{ display: "flex", }}>
-                        <Typography variant="h5" className={classes.heading}>
+                        <Typography
+                            variant="h5"
+                            className={classes.heading}
+                            style={{
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                            }}
+                        >
                             Rank:
                         </Typography>
                         &nbsp; &nbsp;
-                        <Typography variant="h5" style={{ fontFamily: "Montserrat", fontWeight: "600", }}>
+                        <Typography
+                            variant="h5"
+                            style={{
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                fontSize: 20,
+                            }}
+                        >
                             {crypto?.market_cap_rank}
                         </Typography>
                     </span>
 
                     {/* CURRENT PRICE */}
                     <span style={{ display: "flex", }}>
-                        <Typography variant="h5" className={classes.heading}>
+                        <Typography
+                            variant="h5"
+                            className={classes.heading}
+                        >
                             Current Price:
                         </Typography>
                         &nbsp; &nbsp;
-                        <Typography variant="h5" style={{ fontFamily: "Montserrat", fontWeight: "600", }}>
+                        <Typography
+                            variant="h5"
+                            style={{
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                fontSize: 20,
+                            }
+                            }>
                             {symbol}{" "}
                             {numberWithCommas(
                                 crypto?.market_data.current_price[currency.toLowerCase()]
                             )}
                         </Typography>
                     </span>
-                    <span style={{ display: "flex", }}>
 
-                        {/* MARKET CAP  */}
-                        <Typography variant="h5" className={classes.heading}>
+                    {/* MARKET CAP  */}
+                    <span style={{ display: "flex", }}>
+                        <Typography
+                            variant="h5"
+                            className={classes.heading}
+                        >
                             Market Cap:
                         </Typography>
                         &nbsp; &nbsp;
-                        <Typography variant="h5" style={{ fontFamily: "Montserrat", fontWeight: "600", }}>
+                        <Typography
+                            variant="h5"
+                            className={classes.heading}
+                            style={{
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                fontSize: 20,
+                            }}
+                        >
                             {symbol}{" "}
                             {numberWithCommas(crypto?.market_data.market_cap[currency.toLowerCase()])}
+                        </Typography>
+                    </span>
+                    {/* ALL TIME HIGH  */}
+                    <span style={{ display: "flex", }}>
+                        <Typography
+                            variant="h5"
+                            className={classes.heading}
+                        >
+                            All Time High:
+                        </Typography>
+                        &nbsp; &nbsp;
+                        <Typography
+                            variant="h5"
+                            className={classes.heading}
+                            style={{
+                                fontFamily: "Montserrat",
+                                fontWeight: "600",
+                                fontSize: 20,
+                            }}
+                        >
+                            {symbol}{" "}
+                            {numberWithCommas(crypto?.market_data.ath[currency.toLowerCase()])}
                         </Typography>
                     </span>
                 </div>
             </div>
             <CryptoInfo crypto={crypto} />
-        </div>
+        </div >
     )
 }
 

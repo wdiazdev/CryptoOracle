@@ -26,6 +26,8 @@ const Cryptotable = () => {
         setLoading(false);
     };
 
+    console.log(crypto);
+
     useEffect(() => {
         fetchCryptos();
         // eslint-disable-next-line
@@ -98,13 +100,14 @@ const Cryptotable = () => {
                             <Table>
                                 <TableHead style={{ backgroundColor: "#04D4F0" }}>
                                     <TableRow>
-                                        {["Name", "Price", "24h%", "Market Cap", "Circulating Supply"].map((tableHead) => (
+                                        {["Rank", "Name", "Price", "24h%", "Market Cap", "Circulating Supply"].map((tableHead) => (
                                             <TableCell
                                                 style={{
                                                     color: "#111",
                                                     fontWeight: "600",
                                                     fontSize: 16,
-                                                    fontFamily: "Montserrat"
+                                                    fontFamily: "Montserrat",
+                                                    textAlign: "center",
                                                 }}
                                                 key={tableHead}
                                                 align={tableHead === "Name" ? "" : "right"}
@@ -126,6 +129,15 @@ const Cryptotable = () => {
                                                     className={classes.row}
                                                     key={row.name}
                                                 >
+                                                    {/* TABLE CELL FOR RANK  */}
+                                                    <TableCell
+                                                        align="center"
+                                                        style={{
+                                                            fontFamily: "Montserrat",
+                                                        }}
+                                                    >
+                                                        {row.market_cap_rank}
+                                                    </TableCell>
 
                                                     {/* TABLE CELL FOR IMAGE, SYMBOL AND NAME */}
                                                     <TableCell
@@ -142,7 +154,7 @@ const Cryptotable = () => {
                                                             src={row?.image}
                                                             alt={row.name}
                                                             height="50"
-                                                            style={{ margin: 10 }}
+                                                            style={{ margin: 5 }}
                                                         />
                                                         <div
                                                             style={{
@@ -169,7 +181,7 @@ const Cryptotable = () => {
 
                                                     {/* TABLE CELL FOR PRICE */}
                                                     <TableCell
-                                                        align="right"
+                                                        align="center"
                                                         style={{
                                                             fontFamily: "Montserrat",
                                                         }}
@@ -180,7 +192,7 @@ const Cryptotable = () => {
 
                                                     {/* TABLE CELL FOR PRICE CHANGE  */}
                                                     <TableCell
-                                                        align="right"
+                                                        align="center"
                                                         style={{
                                                             color: priceChange > 0 ? "#7CFC00" : "#FF0000",
                                                             fontWeight: 600,
@@ -193,7 +205,7 @@ const Cryptotable = () => {
 
                                                     {/* TABLE CELL FOR MARKET CAP  */}
                                                     <TableCell
-                                                        align="right"
+                                                        align="center"
                                                         style={{
                                                             fontFamily: "Montserrat",
                                                         }}
@@ -203,7 +215,7 @@ const Cryptotable = () => {
 
                                                     {/* TABLE CELL FOR CIRCULATING SUPPLY  */}
                                                     <TableCell
-                                                        align="right"
+                                                        align="center"
                                                         style={{
                                                             fontFamily: "Montserrat",
                                                         }}
@@ -213,7 +225,6 @@ const Cryptotable = () => {
                                                 </TableRow>
                                             )
                                         })}
-
                                 </TableBody>
                             </Table>
                         )}
@@ -235,7 +246,6 @@ const Cryptotable = () => {
                         window.scroll(0, 450);
                     }}
                 />
-
             </Container>
         </ThemeProvider >
     )

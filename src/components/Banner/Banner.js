@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container, Typography, makeStyles } from "@material-ui/core";
+import { Container, makeStyles } from "@material-ui/core";
 import Carousel from './Carousel';
-import BannerImage from "./bannerimage.jpg"
+import BannerImage from "./bannerimage.jpg";
 
 
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     banner: {
         backgroundImage: `url(${BannerImage})`,
         backgroundRepeat: "no-repeat",
@@ -16,12 +16,40 @@ const useStyles = makeStyles(() => ({
         flexDirection: "column",
         justifyContent: "center",
         height: 400,
+        [theme.breakpoints.down("sm")]: {
+            height: 350,
+        },
+        [theme.breakpoints.down("xs")]: {
+            height: 300,
+        },
     },
     header: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
         textAlign: "center",
+        fontWeight: 600,
+        fontFamily: "Montserrat",
+        fontSize: 45,
+        marginBottom: 10,
+        [theme.breakpoints.down("sm")]: {
+            fontSize: 30,
+        },
+        [theme.breakpoints.down("xs")]: {
+            fontSize: 22,
+        },
+    },
+    subheader: {
+        color: "#04D4F0",
+        fontSize: 16,
+        fontWeight: 600,
+        fontFamily: "Montserrat",
+        textTransform: "capitalize",
+        textAlign: "center",
+        marginBottom: 20,
+        [theme.breakpoints.down("sm")]: {
+            fontSize: 14,
+        },
+        [theme.breakpoints.down("xs")]: {
+            fontSize: 10,
+        },
     }
 }));
 
@@ -32,33 +60,14 @@ const Banner = () => {
         <div className={classes.banner}>
             <Container className={classes.bannerStyles}>
                 <div className={classes.header}>
-                    <Typography
-                        variant='H1'
-                        style={{
-                            fontWeight: "bold",
-                            fontFamily: "Montserrat",
-                            fontSize: 80,
-                            marginBottom: 10,
-                        }}
-                    >
-                        CryptoOracle
-                    </Typography>
-                    <Typography
-                        variant='subtitle2'
-                        style={{
-                            color: "#04D4F0",
-                            fontSize: 18,
-                            fontWeight: 600,
-                            fontFamily: "Montserrat",
-                            textTransform: "capitalize",
-                        }}
-                    >
-                        Today's Cryptocurrency Prices by Market Cap
-                    </Typography>
+                    <h1>CryptoOracle</h1>
+                </div>
+                <div className={classes.subheader}>
+                    <h3>Today's Cryptocurrency Prices by Market Cap</h3>
                 </div>
                 <Carousel />
-            </Container>
-        </div>
+            </Container >
+        </div >
     )
 }
 

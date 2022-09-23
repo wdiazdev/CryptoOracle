@@ -8,12 +8,15 @@ import { Link } from 'react-router-dom';
 
 
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     carousel: {
         height: "50%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        [theme.breakpoints.down("sm")]: {
+            height: "40%",
+        }
     },
     carouselItem: {
         display: "flex",

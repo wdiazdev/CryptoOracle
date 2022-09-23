@@ -11,10 +11,10 @@ import { OracleContextState } from "../OracleContext";
 const useStyles = makeStyles(() => ({
     brandName: {
         flex: 1,
-        color: "#04D4F0",
         fontFamily: "Montserrat",
         fontWeight: "bold",
         cursor: "pointer",
+        color: "#04D4F0",
     },
 }));
 

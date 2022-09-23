@@ -81,13 +81,13 @@ const CryptoInfo = ({ crypto }) => {
                                 borderColor: "#04D4F0",
                             }],
                         }}
-                    // options={{
-                    //     elements: {
-                    //         point: {
-                    //             radius: 1,
-                    //         },
-                    //     },
-                    // }}
+                        options={{
+                            elements: {
+                                point: {
+                                    radius: 1,
+                                },
+                            },
+                        }}
                     />
                     <div
                         style={{
