@@ -4,6 +4,7 @@ import Carousel from './Carousel';
 import BannerImage from "./bannerimage.jpg";
 
 
+
 const useStyles = makeStyles((theme) => ({
     banner: {
         backgroundImage: `url(${BannerImage})`,
