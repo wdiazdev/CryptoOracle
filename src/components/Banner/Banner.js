@@ -3,6 +3,7 @@ import { Container, makeStyles } from "@material-ui/core";
 import Carousel from './Carousel';
 import BannerImage from "./bannerimage.jpg";
 
+
 const useStyles = makeStyles((theme) => ({
     banner: {
         backgroundImage: `url(${BannerImage})`,
